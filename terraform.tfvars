@@ -1,1 +1,1 @@
-ver_mod_aws_vpc = "3.18.1"
+region = "ap-south-1"
