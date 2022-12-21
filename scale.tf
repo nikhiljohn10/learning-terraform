@@ -1,6 +1,6 @@
 module "blog_asg" {
   source    = "terraform-aws-modules/autoscaling/aws"
-  version   = local.ver_mod_aws_asg
+  version   = "6.7.0"
   
   name                = "${var.environment.name}-blog"
   min_size            = var.min_size

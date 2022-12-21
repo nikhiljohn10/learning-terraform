@@ -79,10 +79,11 @@ variable "region" {
 #   default = "8.2.1"
 # }
 
-# variable "ver_mod_aws_vpc" {
-#   description = ""
-#   default = "3.18.1"
-# }
+variable "aws_vpc_version" {
+  description = "AWS VPC module version"
+  type        = string
+  default     = "3.18.1"
+}
 
 # variable "ver_mod_aws_asg" {
 #   description = ""

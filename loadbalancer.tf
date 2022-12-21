@@ -1,6 +1,6 @@
 module "blog_alb" {
   source  = "terraform-aws-modules/alb/aws"
-  version = "${local.ver_mod_aws_alb}"
+  version = "8.2.1"
 
   name    = "${var.environment.name}-blog-alb"
 
