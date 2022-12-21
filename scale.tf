@@ -1,12 +1,11 @@
-
 module "blog_asg" {
   source    = "terraform-aws-modules/autoscaling/aws"
-  version   = "6.7.0"
+  version   = var.version.mod_aws_asg
   
-  name                = "blog"
-  min_size            = 1
-  max_size            = 2
-  desired_capacity    = 1
+  name                = "${var.environment.name}-blog"
+  min_size            = var.min_size
+  max_size            = var.max_size
+  desired_capacity    = var.desired_capacity
 
   vpc_zone_identifier     = module.blog_vpc.public_subnets
 

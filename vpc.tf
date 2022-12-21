@@ -1,11 +1,21 @@
 module "blog_vpc" {
   source = "terraform-aws-modules/vpc/aws"
+  version = var.version.mod_aws_vpc
 
-  name = "dev"
-  cidr = "10.0.0.0/16"
+  name = var.environment.name
+  cidr = "${var.environment.network_prefix}.0.0/16"
 
-  azs             = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
-  public_subnets  = ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"]
+  azs             = [
+    "${var.region}a",
+    "${var.region}b",
+    "${var.region}c"
+  ]
+
+  public_subnets  = [
+    "${var.environment.network_prefix}.101.0/24",
+    "${var.environment.network_prefix}.102.0/24",
+    "${var.environment.network_prefix}.103.0/24"
+  ]
 
   enable_nat_gateway    = true
   enable_dns_hostnames  = true
@@ -13,6 +23,6 @@ module "blog_vpc" {
 
   tags = {
     Terraform   = "true"
-    Environment = "dev"
+    Environment = var.environment.name
   }
 }
