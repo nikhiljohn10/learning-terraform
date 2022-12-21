@@ -1,6 +1,6 @@
 module "blog_sg" {
   source  = "terraform-aws-modules/security-group/aws"
-  version = var.ver_mod_aws_sg
+  version = local.ver_mod_aws_sg
 
   name        = "${var.environment.name}-blog"
   description = "A security group"
