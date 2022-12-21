@@ -51,23 +51,23 @@ variable "region" {
   default = "ap-south-1"
 }
 
-variable "ver" {
-  description = "Versions of modules and providers"
+# variable "ver" {
+#   description = "Versions of modules and providers"
 
-  type = object({
-    mod_aws_sg = string
-    mod_aws_alb = string
-    mod_aws_vpc = string
-    mod_aws_asg = string
-  })
+#   type = object({
+#     mod_aws_sg = string
+#     mod_aws_alb = string
+#     mod_aws_vpc = string
+#     mod_aws_asg = string
+#   })
 
-  default = {
-    mod_aws_sg = "4.16.2"
-    mod_aws_alb = "8.2.1"
-    mod_aws_vpc = "3.18.1"
-    mod_aws_asg = "6.7.0"
-  }
-}
+#   default = {
+#     mod_aws_sg = "4.16.2"
+#     mod_aws_alb = "8.2.1"
+#     mod_aws_vpc = "3.18.1"
+#     mod_aws_asg = "6.7.0"
+#   }
+# }
 
 # variable "ver_mod_aws_sg" {
 #   description = ""
