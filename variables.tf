@@ -51,7 +51,7 @@ variable "region" {
   default = "ap-south-1"
 }
 
-variable "version" {
+variable "ver" {
   description = "Versions of modules and providers"
 
   type = object({
