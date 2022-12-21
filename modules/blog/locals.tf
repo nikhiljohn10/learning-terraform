@@ -1,0 +1,1 @@
+region = var.region
