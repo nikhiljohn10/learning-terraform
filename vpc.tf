@@ -1,6 +1,6 @@
 module "blog_vpc" {
   source = "terraform-aws-modules/vpc/aws"
-  version = var.version.mod_aws_vpc
+  version = var.ver_mod_aws_vpc
 
   name = var.environment.name
   cidr = "${var.environment.network_prefix}.0.0/16"
