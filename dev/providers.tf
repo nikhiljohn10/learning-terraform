@@ -7,5 +7,5 @@ terraform {
 }
 
 provider "aws" {
-  region  = module.dev.region
+    region = local.region
 }
